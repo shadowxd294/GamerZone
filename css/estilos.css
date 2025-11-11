@@ -1,0 +1,68 @@
+
+/* GamerZone Store - estilos.css */
+/* Colores: bg oscuro, violeta neón, cian neón, acentos */
+:root{
+  --bg: #0b0b0b;
+  --card: #0f0f13;
+  --violet: #7c3aed;
+  --cyan: #06b6d4;
+  --muted: #bfc7d6;
+  --accent: linear-gradient(90deg,var(--violet),var(--cyan));
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--muted);font-family:var(--font-body);min-height:100%}
+header .topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 32px;border-bottom:1px solid rgba(255,255,255,0.04)}
+h1{font-family:var(--font-heading);color:var(--violet);margin:0}
+nav a{color:var(--muted);margin-left:18px;text-decoration:none;font-weight:600}
+nav a:hover{color:var(--cyan)}
+
+/* Hero / Carrusel */
+.hero{display:flex;gap:24px;padding:28px;align-items:center}
+.carousel{width:60%;position:relative;overflow:hidden;border-radius:12px;border:1px solid rgba(124,58,237,0.12)}
+.slides{display:flex;transition:transform 0.6s ease}
+.slides img{width:100%;height:320px;object-fit:cover;display:block}
+
+/* Controls */
+.controls{position:absolute;inset:0;display:flex;justify-content:space-between;align-items:center;padding:0 8px}
+.controls button{background:rgba(0,0,0,0.5);border:1px solid rgba(255,255,255,0.06);color:var(--muted);padding:8px 12px;border-radius:6px;cursor:pointer}
+
+/* Intro text variations (párrafos con distintos estilos) */
+.intro{width:40%}
+.intro h2{color:var(--cyan);font-family:var(--font-heading);margin-top:0}
+.p1{color:#d1b3ff;font-size:16px}
+.p2{color:#9ff0ff;font-size:14px}
+
+/* Productos */
+.productos{padding:28px}
+.categorias{display:flex;gap:12px;list-style:none;padding:0;margin:8px 0 20px 0}
+.categorias li{background:rgba(255,255,255,0.03);padding:8px 12px;border-radius:8px;color:var(--muted)}
+
+/* Galería grid y tarjetas */
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.card{background:var(--card);padding:12px;border-radius:10px;text-align:center;border:1px solid rgba(255,255,255,0.03)}
+.card img{width:100%;height:140px;object-fit:cover;border-radius:6px}
+.card h3{margin:8px 0 4px 0;color:var(--violet)}
+.card p{margin:0;color:var(--cyan);font-weight:700}
+
+/* Tabla */
+.tabla{width:100%;border-collapse:collapse;margin-top:18px}
+.tabla th, .tabla td{padding:10px;border-bottom:1px solid rgba(255,255,255,0.03);text-align:left}
+.tabla thead th{color:var(--cyan);font-weight:700}
+
+/* Contacto */
+.contacto{padding:28px}
+
+/* Footer */
+footer{border-top:1px solid rgba(255,255,255,0.04);padding:18px 32px;margin-top:40px}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-inner a{color:var(--muted);text-decoration:none;margin-left:12px}
+
+/* Responsivo */
+@media (max-width:900px){
+  .hero{flex-direction:column}
+  .carousel, .intro{width:100%}
+  .slides img{height:220px}
+}
